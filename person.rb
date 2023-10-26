@@ -1,15 +1,22 @@
 class Person
-  attr_reader :id
-  attr_accessor :name, :age
+  @@id_counter = 0
 
-  def initialize(age, id, name: 'Unknown', parent_permission: true)
+  attr_reader :id
+  attr_accessor :name, :age 
+
+  def initialize(age, name: "Unknown", parent_permission: true)
     @age = age
     @name = name
-    @id = id
+    @id = generate_id
     @parent_permission = parent_permission
   end
 
   private
+
+  def generate_id
+    @@id_counter += 1
+    "ID-#{@@id_counter}"
+  end
 
   def of_age?
     age >= 18
