@@ -1,10 +1,8 @@
 class Person
-  @@id_counter = 0
-
   attr_reader :id
-  attr_accessor :name, :age 
+  attr_accessor :name, :age
 
-  def initialize(age, name: "Unknown", parent_permission: true)
+  def initialize(age, name: 'Unknown', parent_permission: true)
     @age = age
     @name = name
     @id = generate_id
@@ -14,8 +12,9 @@ class Person
   private
 
   def generate_id
-    @@id_counter += 1
-    "ID-#{@@id_counter}"
+    timestamp = Time.now.to_i
+    object_id_hex = (object_id << 1).to_s(16)
+    "ID-#{timestamp}-#{object_id_hex}"
   end
 
   def of_age?

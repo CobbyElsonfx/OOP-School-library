@@ -1,12 +1,11 @@
 class Teacher < Person
-  def initialize(age, subject,specialization, name: "Unknown", 
-   parent_permission: true )
+  def initialize(age, _subject, specialization, name: 'Unknown',
+                 parent_permission: true)
     super(age, name, parent_permission)
-    @specialization = specialization 
+    @specialization = specialization
   end
 
   def can_use_services?
-    return true
+    true
   end
 end
-    
