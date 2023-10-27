@@ -33,4 +33,3 @@ class Person < Nameable
     "ID-#{timestamp}-#{object_id_hex}"
   end
 end
-
