@@ -5,7 +5,6 @@ require './teacher'
 require './book'
 require './rental'
 
-
 # Assuming the classes and methods are defined in the given order
 
 # Test 1: List All Books
