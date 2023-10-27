@@ -68,8 +68,8 @@ Clone this repository to your desired folder by running the following commands i
 
 ```sh
   cd your-prefered-folder-name
+  https://github.com/CobbyElsonfx/OOP-School-library.git
   
-  git clone git@github.com:CobbyElsonfx/enumerable-project.git
 ```
 
 ### Install
