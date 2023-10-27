@@ -1,9 +1,14 @@
+require './rental'
 class Book
   attr_accessor :title, :author, :rentals
 
   def initialize(author, title)
     @author = author
     @title = title
-    @rentals = [] # Initialize an empty array to store rentals
+    @rentals = []
+  end
+
+  def add_rental(person, date)
+    Rental.new(date, self, person)
   end
 end

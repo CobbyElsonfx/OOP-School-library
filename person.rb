@@ -1,11 +1,12 @@
 require './nameable'
+require './rental'
 
 class Person < Nameable
   attr_reader :id, :rentals
   attr_accessor :name, :age, :parent_permission
 
   def initialize(age, name = 'Unknown', parent_permission: true)
-    super
+    super()
     @age = age
     @name = name
     @id = generate_id
@@ -23,6 +24,15 @@ class Person < Nameable
 
   def correct_name
     @name
+  end
+
+  def add_rental(book, date)
+    Rental.new(date, book, self)
+  end
+
+  def classroom=(classroom)
+    @classroom = classroom
+    classroom.students.push(self) unless classroom.students.include?(self)
   end
 
   private

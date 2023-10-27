@@ -6,7 +6,9 @@ require './book'
 require './rental'
 
 
+# Assuming the classes and methods are defined in the given order
 
+# Test 1: List All Books
 def test_list_all_books
   # Create some books
   book1 = Book.new('Author1', 'Title1')
@@ -23,7 +25,7 @@ def test_list_all_books
   end
 end
 
-# Test 2: List all people
+# Test 2: List All People
 def test_list_all_people
   # Create some people (teachers and students)
   teacher1 = Teacher.new(35, 'Math', 'Jane Doe')
@@ -40,20 +42,20 @@ def test_list_all_people
   end
 end
 
-# Test 3: Create a person
+# Test 3: Create a Person
 def test_create_person
   # Create a person with age, name, and parent permission
   person = Person.new(25, 'John Doe', false) # Change 'false' to 'true' if they have parent permission
   puts "Created Person: #{person.name}, Age: #{person.age}, Parent Permission: #{person.parent_permission}"
 end
 
-# Test 4: Create a book
+# Test 4: Create a Book
 def test_create_book
   book = Book.new('Author4', 'Title4')
   puts "Created Book: #{book.title} by #{book.author}"
 end
 
-# Test 5: Create a rental
+# Test 5: Create a Rental
 def test_create_rental
   # Create a person and a book
   person = Person.new(25, 'David')
@@ -64,7 +66,7 @@ def test_create_rental
   puts "#{person.name} rented the book '#{book.title}' on #{rental.date}"
 end
 
-# Test 6: List all rentals for a given person
+# Test 6: List Rentals for a Specific Person
 def test_list_rentals_for_person
   # Create people and rentals
   person1 = Person.new(25, 'David')
@@ -82,7 +84,7 @@ def test_list_rentals_for_person
   end
 end
 
-# Test 7: Create a person
+# Test 7: Create Different Types of People (Teachers and Students)
 def test_create_person_types
   # Create a teacher
   teacher = Teacher.new(30, 'Science', 'John Smith')
