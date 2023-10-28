@@ -1,4 +1,3 @@
-require './student'
 class Classroom
   attr_accessor :label
   attr_reader :students
@@ -9,7 +8,7 @@ class Classroom
   end
 
   def add_student(student)
+    @students.push(student) unless students.include?(student)
     student.classroom = self
-    students << student
   end
 end
